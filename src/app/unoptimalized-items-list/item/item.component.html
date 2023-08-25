@@ -2,9 +2,18 @@
     <div class="row">
         <div class="col">{{item.no}}</div>
         <div class="col">{{item.name}}</div>
+        <!--<div class="col">{{item.name | uppercase}}</div> --><!-- rozwiązanie 2.1 -->
+        <!--<div class="col">{{item.name | lowPrice:item.price}}</div> --><!-- rozwiązanie 3.1 -->
+        <!--<div class="col">{{item.name | fullStock:item.quantity}}</div> --><!-- rozwiązanie 3.2 -->
         <div class="col">{{item.price}}</div>
+        <!--<div class="col">{{item.price | currency:'USD':'symbol'}}</div> --><!-- rozwiązanie +1.4 -->
         <div class="col">{{item.quantity}}</div>
         <div class="col">{{item.percentage}}</div>
+        <!--<div class="col">{{item.percentage | percent:'1.1'}}</div> --><!-- rozwiązanie 2.2 -->
+        <!--<div class="col">{{item.percentage | percent:'1.1' | textGenerator | upperCaseByLastIndx:upperIndexes}}</div>--> <!-- rozwiązanie 3* -->
         <div class="col">{{item.createDate}}</div>
+        <!--<div class="col"><div class="col">{{item.createDate | date:'EEEE, dd MMM, yy'}}</div> --><!-- rozwiązanie 2.3 -->
+        <!--<div class="col"><div class="col">{{item.createDate | date:'yy/d/MM, EEE'}}</div> --><!-- rozwiązanie 2.4 -->
+        <div class="col"></div>
     </div>
 </ng-container>

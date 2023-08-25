@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MainPageComponent implements OnInit {
 
   title: string = 'Witamy na szkoleniu';
+  firstPermission: boolean = false; // rozwiązanie 5.1 + rozwiązanie 5.2
+  secondPermission: boolean = false; // rozwiązanie 5.2
 
   constructor() { }
 
