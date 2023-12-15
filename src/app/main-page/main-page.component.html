@@ -6,20 +6,20 @@
         <!-- rozwiązanie 5.1 i 5.2 - wspólne checkboxy -->
         <div class="form-check">
             <input class="form-check-input" type="checkbox" 
-                [(ngModel)]="firstPermission" id="firstPermission">
+                [(ngModel)]="firstPer" id="firstPermission">
             <label class="form-check-label" for="firstPermission">
               First checkbox
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" 
-                [(ngModel)]="secondPermission" id="secondPermission">
+                [(ngModel)]="secondPer" id="secondPermission">
             <label class="form-check-label" for="secondPermission">
               Second checkbox
             </label>
           </div>
-        <!-- <app-unoptimalized-items-list *appSimpleCheckPermission="firstPermission"></app-unoptimalized-items-list> --> <!-- rozwiązanie 5.1 -->
-        <!-- <app-unoptimalized-items-list *appCheckPermission="firstPermission;secondPermission:secondPermission"></app-unoptimalized-items-list> --> <!-- rozwiązanie 5.2 -->
-        <app-unoptimalized-items-list></app-unoptimalized-items-list>
+         <!--<app-unoptimalized-items-list *appSimpleCheckPermission="firstPermission"></app-unoptimalized-items-list>--> <!-- rozwiązanie 5.1 -->
+        <app-unoptimalized-items-list *appCheckPermission="firstPer;secondPermission:secondPer"></app-unoptimalized-items-list>  <!-- rozwiązanie 5.2 -->
+        <!--<app-unoptimalized-items-list></app-unoptimalized-items-list>--> 
     </div>
 </div>

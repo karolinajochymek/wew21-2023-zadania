@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Item } from 'src/app/models/item';
 
 @Component({
@@ -11,6 +11,13 @@ import { Item } from 'src/app/models/item';
   styleUrls: ['./unoptimalized-items-list.component.scss']
 })
 export class UnoptimalizedItemsListComponent implements OnInit {
+
+  @Input() set newitem(newitem: Item) {
+    if (!newitem)
+    return;
+  
+    this.items.push(newitem);
+  }
 
   //items: Item[] = [];
     items: Item[] =[
